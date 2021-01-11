@@ -37,8 +37,17 @@ PlaygroundPage.current.liveView = canvas
  */
 
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
-canvas.drawRectangle(at: Point(x: 50, y: 75), width: 100, height: 200)
 
+canvas.drawLine(from:Point(x:0,y:0), to:Point(x:500,y:50))
+canvas.drawLine(from:Point(x:50,y:0),to: Point(x:500,y:100))
+canvas.drawLine(from:Point(x:100,y:0),to: Point(x:500,y:150))
+canvas.drawLine(from:Point(x:150,y:0),to: Point(x:500,y:200))
+canvas.drawLine(from:Point(x:200,y:0),to: Point(x:500,y:250))
+canvas.drawLine(from:Point(x:250,y:0),to: Point(x:500,y:300))
+canvas.drawLine(from:Point(x:300,y:0),to: Point(x:500,y:350))
+canvas.drawLine(from:Point(x:350,y:0), to:Point(x:500,y:400))
+canvas.drawLine(from:Point(x:400,y:0), to:Point(x:500,y:450))
+canvas.drawLine(from:Point(x:450,y:0), to:Point(x:500,y:500))
 /*:
  ## Show the Live View
  Don't see any results?
