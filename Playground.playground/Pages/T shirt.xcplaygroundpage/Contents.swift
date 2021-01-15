@@ -39,18 +39,21 @@ PlaygroundPage.current.liveView = canvas
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
 canvas.drawAxes(withScale:true,by:50)
 canvas.drawShapesWithBorders=true
-//big triangle
-canvas.defaultBorderWidth=20
-
-canvas.fillColor=Color.init(hue: 0, saturation: 0, brightness: 0, alpha: 0)
-
+//outline (triangle)
+canvas.defaultBorderWidth=30
+canvas.fillColor=Color.white
 canvas.drawCustomShape(with: [Point(x:50,y:50),Point(x:250,y:350),Point(x:450,y:50)])
+canvas.lineColor=Color.white
+canvas.drawLine(from:Point(x:185,y:255), to:Point(x:198,y:275), lineWidth:15)
+canvas.drawLine(from:Point(x:308,y:265), to:Point(x:320,y:248), lineWidth:15)
 //planet
 canvas.fillColor=Color.black
 canvas.defaultBorderWidth=10
 canvas.drawEllipse(at: Point(x: 250, y: 390), width: 70, height: 70)
 canvas.fillColor=Color.white
-canvas.drawRoundedRectangle(at: Point(x: 195, y: 380), width: 110, height: 10)
+canvas.rotate(by:20)
+canvas.drawRoundedRectangle(at: Point(x: 312, y: 275), width: 110, height: 9)
+canvas.rotate(by:-20)
 //base
 canvas.fillColor=Color.black
 canvas.drawCustomShape(with:[Point(x:50,y:50),Point(x:82,y:100),Point(x:418,y:100),Point(x:450,y:50)])
@@ -76,8 +79,42 @@ canvas.drawCustomShape(with:[Point(x:300,y:120),Point(x:330,y:145),Point(x:360,y
 canvas.drawCustomShape(with:[Point(x:307,y:142),Point(x:330,y:162),Point(x:353,y:142)])
 canvas.drawCustomShape(with:[Point(x:314,y:159),Point(x:330,y:174),Point(x:348,y:159)])
 canvas.drawRectangle(at:Point(x:325,y:100), width: 10, height: 20)
-//decorations
-
+//dots
+canvas.drawEllipse(at:Point(x:160,y:112),width:7,height:7)
+canvas.drawEllipse(at:Point(x:148,y:165),width:7,height:7)
+canvas.drawEllipse(at:Point(x:200,y:185),width:7,height:7)
+canvas.drawEllipse(at:Point(x:252,y:113),width:7,height:7)
+canvas.drawEllipse(at:Point(x:262,y:173),width:7,height:7)
+canvas.drawEllipse(at:Point(x:253,y:217),width:7,height:7)
+canvas.drawEllipse(at:Point(x:193,y:230),width:7,height:7)
+canvas.drawEllipse(at:Point(x:300,y:163),width:7,height:7)
+canvas.drawEllipse(at:Point(x:360,y:110),width:7,height:7)
+canvas.drawEllipse(at:Point(x:300,y:220),width:7,height:7)
+canvas.drawEllipse(at:Point(x:233,y:293),width:7,height:7)
+//stars
+canvas.drawRoundedRectangle(at:Point(x:168,y:200), width:15, height:5)
+canvas.drawRoundedRectangle(at:Point(x:173,y:195), width:5, height:15)
+canvas.drawRoundedRectangle(at:Point(x:203,y:115), width:15, height:5)
+canvas.drawRoundedRectangle(at:Point(x:208,y:110), width:5, height:15)
+canvas.drawRoundedRectangle(at:Point(x:272,y:139), width:15, height:5)
+canvas.drawRoundedRectangle(at:Point(x:277,y:134), width:5, height:15)
+canvas.drawRoundedRectangle(at:Point(x:210,y:210), width:15, height:5)
+canvas.drawRoundedRectangle(at:Point(x:215,y:205), width:5, height:15)
+canvas.drawRoundedRectangle(at:Point(x:280,y:195), width:15, height:5)
+canvas.drawRoundedRectangle(at:Point(x:285,y:190), width:5, height:15)
+canvas.drawRoundedRectangle(at:Point(x:365,y:130), width:15, height:5)
+canvas.drawRoundedRectangle(at:Point(x:370,y:125), width:5, height:15)
+canvas.drawRoundedRectangle(at:Point(x:325,y:188), width:15, height:5)
+canvas.drawRoundedRectangle(at:Point(x:330,y:183), width:5, height:15)
+canvas.drawRoundedRectangle(at:Point(x:263,y:282), width:15, height:5)
+canvas.drawRoundedRectangle(at:Point(x:268,y:277), width:5, height:15)
+canvas.drawRoundedRectangle(at:Point(x:242,y:317), width:15, height:5)
+canvas.drawRoundedRectangle(at:Point(x:247,y:312), width:5, height:15)
+//loop
+canvas.lineColor=Color.black
+canvas.drawCurve(from:Point(x:203,y:315),to:Point(x:311,y:297), control1:Point(x:103,y:285), control2:Point(x:368,y:240), showControlPoints:false, lineWidth:8)
+canvas.drawCurve(from:Point(x:178,y:280),to:Point(x:330,y:262), control1:Point(x:78,y:250), control2:Point(x:383,y:205), showControlPoints:false, lineWidth:8)
+//outside decor
 /*:
  ## Show the Live View
  Don't see any results?
