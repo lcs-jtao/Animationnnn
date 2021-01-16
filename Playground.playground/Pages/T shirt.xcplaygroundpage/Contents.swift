@@ -37,7 +37,7 @@ PlaygroundPage.current.liveView = canvas
  */
 
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
-canvas.drawAxes(withScale:true,by:50)
+///canvas.drawAxes(withScale:true,by:50)
 canvas.drawShapesWithBorders=true
 //outline (triangle)
 canvas.defaultBorderWidth=30
@@ -52,7 +52,7 @@ canvas.defaultBorderWidth=10
 canvas.drawEllipse(at: Point(x: 250, y: 390), width: 70, height: 70)
 canvas.fillColor=Color.white
 canvas.rotate(by:20)
-canvas.drawRoundedRectangle(at: Point(x: 312, y: 275), width: 110, height: 9)
+canvas.drawRoundedRectangle(at: Point(x: 312, y: 275), width: 110, height: 10)
 canvas.rotate(by:-20)
 //base
 canvas.fillColor=Color.black
@@ -114,7 +114,36 @@ canvas.drawRoundedRectangle(at:Point(x:247,y:312), width:5, height:15)
 canvas.lineColor=Color.black
 canvas.drawCurve(from:Point(x:203,y:315),to:Point(x:311,y:297), control1:Point(x:103,y:285), control2:Point(x:368,y:240), showControlPoints:false, lineWidth:8)
 canvas.drawCurve(from:Point(x:178,y:280),to:Point(x:330,y:262), control1:Point(x:78,y:250), control2:Point(x:383,y:205), showControlPoints:false, lineWidth:8)
-//outside decor
+//leaves1 (outside)
+canvas.drawCurve(from:Point(x:375,y:172),to:Point(x:402,y:252),control1:Point(x:375,y:202),control2:Point(x:380,y:225),showControlPoints:false,lineWidth:6)
+canvas.rotate(by:20)
+canvas.fillColor=Color.white
+canvas.defaultBorderWidth=12
+canvas.drawEllipse(at:Point(x:418,y:75), width:7, height:18)
+canvas.drawEllipse(at:Point(x:440,y:100), width:7, height:18)
+canvas.rotate(by:-90)
+canvas.drawEllipse(at:Point(x:-48,y:430), width:7, height:18)
+canvas.drawEllipse(at:Point(x:-73,y:447), width:7, height:18)
+//leaves2 (outside)
+canvas.rotate(by:30)
+canvas.drawEllipse(at:Point(x:210,y:403), width:30, height:75)
+canvas.rotate(by:40)
+canvas.drawCurve(from:Point(x:395,y:140), to:Point(x:445,y:203), control1:Point(x:395,y:140), control2:Point(x:445,y:200),showControlPoints:false,lineWidth:6)
+canvas.drawLine(from:Point(x:425,y:201), to:Point(x:430,y:185),lineWidth:6)
+canvas.drawLine(from:Point(x:410,y:186), to:Point(x:415,y:170),lineWidth:6)
+canvas.drawLine(from:Point(x:398,y:168), to:Point(x:400,y:155),lineWidth:6)
+canvas.drawLine(from:Point(x:430,y:185), to:Point(x:445,y:186),lineWidth:6)
+///canvas.drawLine(from:Point(x:415,y:170), to:Point(x:440,y:171),lineWidth:6)
+
+canvas.rotate(by:-75)
+canvas.drawEllipse(at:Point(x:-35,y:450), width:25, height:55)
+canvas.rotate(by:75)
+canvas.drawAxes(withScale:true, by:50)
+canvas.drawCurve(from:Point(x:395,y:140), to:Point(x:455,y:155), control1:Point(x:395,y:140), control2:Point(x:460,y:160),showControlPoints:false,lineWidth:6)
+canvas.drawLine(from:Point(x:435,y:165), to:Point(x:430,y:153),lineWidth:6)
+canvas.drawLine(from:Point(x:415,y:160), to:Point(x:410,y:148),lineWidth:6)
+canvas.drawLine(from:Point(x:430,y:150), to:Point(x:440,y:143),lineWidth:6)
+canvas.drawLine(from:Point(x:410,y:145), to:Point(x:420,y:135),lineWidth:6)
 /*:
  ## Show the Live View
  Don't see any results?
