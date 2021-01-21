@@ -36,9 +36,25 @@ PlaygroundPage.current.liveView = canvas
 
  */
 
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
-canvas.drawRectangle(at: Point(x: 50, y: 75), width: 100, height: 200)
+canvas.highPerformance=true
+canvas.translate(to:Point(x:75,y:75))
+//horizontal lines
+for hline in stride(from:0,through:420,by:30){
+    canvas.drawLine(from:Point(x:0,y:hline),to:(Point(x:420,y:hline)))
+}
+//vertical lines
+for vline in stride(from:0,through:420,by:30){
+    canvas.drawLine(from:Point(x:vline,y:0),to:Point(x:vline,y:420))
+}
+//dots
+canvas.drawEllipse(at:Point(x:90,y:330),width:10,height:10)
+canvas.drawEllipse(at:Point(x:90,y:90),width:10,height:10)
+canvas.drawEllipse(at:Point(x:330,y:330),width:10,height:10)
+canvas.drawEllipse(at:Point(x:330,y:90),width:10,height:10)
+canvas.drawEllipse(at:Point(x:210,y:210),width:10,height:10)
+//numbers
 
+canvas.highPerformance=false
 /*:
  ## Show the Live View
  Don't see any results?
