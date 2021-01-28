@@ -52,8 +52,18 @@ canvas.drawEllipse(at:Point(x:90,y:90),width:10,height:10)
 canvas.drawEllipse(at:Point(x:330,y:330),width:10,height:10)
 canvas.drawEllipse(at:Point(x:330,y:90),width:10,height:10)
 canvas.drawEllipse(at:Point(x:210,y:210),width:10,height:10)
-//numbers
-
+//numbers & letters
+var alp: [String]=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"]
+for i in stride(from:1, through:15, by:1){
+    if i<=9{
+        canvas.drawText(message:String(i), at:Point(x:-16,y:(i-1)*30-6),size:13)
+    } else {
+        canvas.drawText(message:String(i), at:Point(x:-20,y:(i-1)*30-6),size:13)
+    }
+}
+for i in stride(from:0,through:14,by:1){
+    canvas.drawText(message:alp[i],at:Point(x:i*30-6,y:-20),size:13)
+}
 canvas.highPerformance=false
 /*:
  ## Show the Live View
